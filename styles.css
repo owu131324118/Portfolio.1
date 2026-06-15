@@ -7,27 +7,16 @@ body {
   margin: 0 auto; /* 中央揃え [29] */
 }
 
-/* ヘッダー [6], [30], [22] */
-.header {
-  position: absolute; /* ヒーローに重ねる [31], [22] */
-  width: 100%;
-  z-index: 10; /* 重なり順 [32], [22] */
-  padding: 24px 40px; /* [30], [22] */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .header {
   position: absolute;
   top: 0;
-  left: 0;                /* 👈 バラの写真の左端に合わせる */
+  left: 0;               
   z-index: 10;
-  padding: 24px 40px;     /* 写真の左端からどのくらい内側に入れるか（好みで削ってもOK） */
+  padding: 24px 40px;    
   display: flex;
-  flex-direction: column; /* 👈 もし縦並び（上からコンタクト、スキル…など）にしたい場合はこれ */
-  align-items: flex-start;/* 👈 左詰めに揃える */
-  gap: 16px;              /* 縦並びにしたときの、ボタン同士の上下の間隔 */
+  flex-direction: column; 
+  align-items: flex-start;
+  gap: 16px;              
 }
 
 .header-logo {
@@ -43,17 +32,11 @@ body {
 }
 
 .site-menu ul {
-  list-style: none; /* [27], [22] */
-  display: flex;
-  gap: 40px; /* 項目間の間隔 [30], [22] */
-}
-
-.site-menu ul {
   list-style: none;
   display: flex;
-  flex-direction: column; /* 👈 ここも縦並び（Works、About、Skill…）にするなら追加 */
-  align-items: flex-start;/* 👈 左詰めに揃える */
-  gap: 20px;              /* メニューごとの間隔 */
+  flex-direction: column; 
+  align-items: flex-start;
+  gap: 20px;             
   padding: 0;
   margin: 0;
 }
