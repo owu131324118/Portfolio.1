@@ -8,15 +8,12 @@ body {
 }
 
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;                /* 左端を基準にする */
-  width: 100%;            /* 写真の幅いっぱいに広げる */
-  box-sizing: border-box; /* 👈 paddingが外にはみ出るのを防ぐ（超重要） */
-  z-index: 10;
-  padding: 24px 40px;     /* 写真の左端から40px内側にメニューが来ます */
+  position: absolute; /* ヒーローに重ねる [31], [22] */
+  width: 100%;
+  z-index: 10; /* 重なり順 [32], [22] */
+  padding: 24px 40px; /* [30], [22] */
   display: flex;
-  justify-content: flex-start; /* 👈 space-between から変更（左詰めに） */
+  justify-content: space-between;
   align-items: center;
 }
 .header-logo {
@@ -37,20 +34,7 @@ body {
   gap: 40px; /* 項目間の間隔 [30], [22] */
 }
 
-.site-menu {
-  display: flex;
-  align-items: center;
-  gap: 48px;
-}
 
-.site-menu ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-start; /* 👈 追記：左詰めで並べる */
-  gap: 40px;
-  padding: 0;                  /* 👈 念のため無駄な余白をリセット */
-  margin: 0;                   /* 👈 念のため無駄な余白をリセット */
-}
 .site-menu a {
   text-decoration: none; /* [27], [22] */
   color: var(--white); /* ヒーロー画像上のため白指定 [33] */
