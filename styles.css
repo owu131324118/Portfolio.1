@@ -7,16 +7,14 @@ body {
   margin: 0 auto; /* 中央揃え [29] */
 }
 
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;               
-  z-index: 10;
-  padding: 24px 40px;    
+header {
+  position: absolute; /* ヒーローに重ねる [31], [22] */
+  width: 100%;
+  z-index: 10; /* 重なり順 [32], [22] */
+  padding: 24px 40px; /* [30], [22] */
   display: flex;
-  flex-direction: column; 
-  align-items: flex-start;
-  gap: 16px;              
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-logo {
@@ -32,13 +30,9 @@ body {
 }
 
 .site-menu ul {
-  list-style: none;
+  list-style: none; /* [27], [22] */
   display: flex;
-  flex-direction: column; 
-  align-items: flex-start;
-  gap: 20px;             
-  padding: 0;
-  margin: 0;
+  gap: 40px; /* 項目間の間隔 [30], [22] */
 }
 
 .site-menu a {
