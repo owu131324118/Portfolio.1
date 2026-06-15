@@ -19,6 +19,17 @@ body {
   align-items: center;
 }
 
+.header {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box; /* 追記：paddingを100%の幅の中に含める設定 */
+  z-index: 10;
+  padding: 24px 40px;     /* このままでも外にはみ出さなくなります */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .header-logo {
   display: block; /* aタグをブロック要素に [30] */
   width: 170px; /* [30] */
