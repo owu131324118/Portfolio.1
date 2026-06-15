@@ -145,6 +145,12 @@ body {
   align-items: flex-start;
 }
 
+.works-card img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 .tag {
   background-color: var(--gray); /* [15], [39] */
   padding: 2px 8px;
