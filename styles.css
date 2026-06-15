@@ -1,4 +1,3 @@
-
 @charset "utf-8";
 
 body {
@@ -22,14 +21,13 @@ body {
 .header {
   position: absolute;
   top: 0;
-  right: 0;               /* 👈 left: 0; ではなく、右端（right）を基準にします */
-  width: 100%;            /* バラの写真（.hero）と同じ幅になります */
-  max-width: 100%;        /* 念のため、写真からはみ出さないようにガード */
-  box-sizing: border-box; /* これで左右の余白（padding）が内側に収まります */
+  left: 0;                /* 左端を基準にする */
+  width: 100%;            /* 写真の幅いっぱいに広げる */
+  box-sizing: border-box; /* 👈 paddingが外にはみ出るのを防ぐ（超重要） */
   z-index: 10;
-  padding: 24px 40px;     /* 写真の右端・左端から40px内側にきれいに収まります */
+  padding: 24px 40px;     /* 写真の左端から40px内側にメニューが来ます */
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* 👈 space-between から変更（左詰めに） */
   align-items: center;
 }
 
@@ -49,6 +47,21 @@ body {
   list-style: none; /* [27], [22] */
   display: flex;
   gap: 40px; /* 項目間の間隔 [30], [22] */
+}
+
+.site-menu {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.site-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start; /* 👈 追記：左詰めで並べる */
+  gap: 40px;
+  padding: 0;                  /* 👈 念のため無駄な余白をリセット */
+  margin: 0;                   /* 👈 念のため無駄な余白をリセット */
 }
 
 .site-menu a {
