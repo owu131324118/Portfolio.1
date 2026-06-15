@@ -21,14 +21,13 @@ body {
 .header {
   position: absolute;
   top: 0;
-  left: 0;                /* 左端を基準にする */
-  width: 100%;            /* 写真の幅いっぱいに広げる */
-  box-sizing: border-box; /* 👈 paddingが外にはみ出るのを防ぐ（超重要） */
+  left: 0;                /* 👈 バラの写真の左端に合わせる */
   z-index: 10;
-  padding: 24px 40px;     /* 写真の左端から40px内側にメニューが来ます */
+  padding: 24px 40px;     /* 写真の左端からどのくらい内側に入れるか（好みで削ってもOK） */
   display: flex;
-  justify-content: flex-start; /* 👈 space-between から変更（左詰めに） */
-  align-items: center;
+  flex-direction: column; /* 👈 もし縦並び（上からコンタクト、スキル…など）にしたい場合はこれ */
+  align-items: flex-start;/* 👈 左詰めに揃える */
+  gap: 16px;              /* 縦並びにしたときの、ボタン同士の上下の間隔 */
 }
 
 .header-logo {
@@ -49,19 +48,14 @@ body {
   gap: 40px; /* 項目間の間隔 [30], [22] */
 }
 
-.site-menu {
-  display: flex;
-  align-items: center;
-  gap: 48px;
-}
-
 .site-menu ul {
   list-style: none;
   display: flex;
-  justify-content: flex-start; /* 👈 追記：左詰めで並べる */
-  gap: 40px;
-  padding: 0;                  /* 👈 念のため無駄な余白をリセット */
-  margin: 0;                   /* 👈 念のため無駄な余白をリセット */
+  flex-direction: column; /* 👈 ここも縦並び（Works、About、Skill…）にするなら追加 */
+  align-items: flex-start;/* 👈 左詰めに揃える */
+  gap: 20px;              /* メニューごとの間隔 */
+  padding: 0;
+  margin: 0;
 }
 
 .site-menu a {
