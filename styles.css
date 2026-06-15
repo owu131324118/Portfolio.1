@@ -21,10 +21,13 @@ body {
 
 .header {
   position: absolute;
-  width: 100%;
-  box-sizing: border-box; /* 追記：paddingを100%の幅の中に含める設定 */
+  top: 0;
+  right: 0;               /* 👈 left: 0; ではなく、右端（right）を基準にします */
+  width: 100%;            /* バラの写真（.hero）と同じ幅になります */
+  max-width: 100%;        /* 念のため、写真からはみ出さないようにガード */
+  box-sizing: border-box; /* これで左右の余白（padding）が内側に収まります */
   z-index: 10;
-  padding: 24px 40px;     /* このままでも外にはみ出さなくなります */
+  padding: 24px 40px;     /* 写真の右端・左端から40px内側にきれいに収まります */
   display: flex;
   justify-content: space-between;
   align-items: center;
